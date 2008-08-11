@@ -1,7 +1,9 @@
 set nocompatible
 
-set guifont=Consolas:h9
 colorscheme cthulhian
+" Fix search highlighting making C comments too hard to read (grey on grey).
+highlight Search gui=reverse guifg=Orange guibg=NONE
+
 syntax on
 filetype plugin on
 filetype indent on
@@ -35,4 +37,34 @@ set path=.,/usr/include,~/include,,
 
 " Googley c indentation.
 set cino=(0g1h1
+
+" Disable toolbar, scrollbars, tabber.
+set guioptions=gm
+
+fun! FullScreen()
+  set columns=320
+  set lines=115
+  winpos -1 44
+endf
+
+fun! MyRc()
+  tabe ~/.vimrc
+  vsplit ~/.vim/joey.vimrc
+endf
+
+nmap <S-F1> :call FullScreen()<CR>
+nmap <S-F2> :call MyRc()<CR>
+
+" Save out current session after saving all files.
+nmap <F2> :wa<Bar>exe "mksession! " . v:this_session<CR>
+set sessionoptions=blank,buffers,curdir,folds,help,tabpages,resize,winsize
+
+" Set current window to 80-column width.
+nmap <F4> 80<C-W><Bar>
+
+" Some meep-related abbreviations.
+iab nsmeep 0<C-D>namespace meep {<CR>}  // namespace meep<Up><End>
+iab nsosx 0<C-D>namespace osx {<CR>}  // namespace osx<Up><End>
+" Note - paste command buffer: use ":p
+" Paste yank into command: <C-R>"
 
