@@ -1,0 +1,53 @@
+Joey's vim cheat sheet.
+
+C-E / C-Y
+  Scroll window without moving cursor.
+H / M / L
+  Go to first / mid / bot line.
+z<CR> / z. / z-
+  Make current cursor line top / mid / bot.
+n / N
+  Repeat search next / prev.
+/\<word\>
+  Search whole word.
+* / #
+  Search next / prev whole word under cursor.
+^
+  Go to first non-whitespace char in line.
+f / F [char]
+  Find next / prev char in line.
+t / T [char]
+  Just like f but stops one char before. Useful combining with d.
+;
+  Repeat find char.
+S-J
+  Join lines in normal and indent mode.
+C
+  Change rest of line (like c$).
+ci [delim]
+  Change text within set of delimiters such as quote or parenthesis.
+=
+  Reindent selection.
+~
+  Change case of a single char.
+r
+  Replace one char and go back to normal mode.
+]p
+  Paste and reindent.
+":p
+  Paste : register. List registers with :registers.
+.
+  Repeat last change.
+A / I
+  Append text in line / Insert text before line.
+
+in insert mode:
+  ctrl-w: delete word before cursor
+  ctrl-u: delete all entered chars in line
+  ctrl-N and P work as usual
+  ctrl-R: insert register, eg. ':'
+  ctrl-T/D: insert/remove one level of indent at beg of line
+  ctrl-X: go into scroll mode
+  ctrl-O: do one normal mode command (like shift-O)
+  ctrl-]: trigger abbreviation
+  <S-arrow>: move word left/right
