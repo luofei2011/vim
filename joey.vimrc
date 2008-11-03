@@ -1,8 +1,16 @@
+" On Windows, source ~/vimfiles/joey.vimrc
+" On Unix, source ~/.vim/joey.vimrc
 set nocompatible
 
 colorscheme cthulhian
-" Fix search highlighting making C comments too hard to read (grey on grey).
-highlight Search gui=reverse guifg=Orange guibg=NONE
+
+" Do os-specific stuff.
+" Proggy Tiny (slashes zero) from http://proggyfonts.com/
+if has('gui_win32')
+  set guifont=ProggyTinyTTSZ:h12:cANSI
+elseif has('gui_mac')
+  set guifont=ProggyTinyTTSZ:h16
+endif
 
 syntax on
 filetype plugin on
@@ -25,6 +33,9 @@ set shiftwidth=2
 set softtabstop=2
 set nowrap
 set bs=2
+
+" Fix search highlighting making C comments too hard to read (grey on grey).
+highlight Search gui=reverse guifg=Orange guibg=NONE
 
 " A more descriptive status line that includes line ending and file type.
 set statusline=%F\ %m%=%{&ff}\ %y\ b%n\ @\ %v,%l/%L\ 
