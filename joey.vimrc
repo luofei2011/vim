@@ -26,11 +26,11 @@ set softtabstop=2
 set nowrap
 set bs=2
 
-" Remove trailing whitespace when writing out c files.
-autocmd FileType c,cpp autocmd BufWritePre <buffer> :%s/\s\+$//e
-
 " A more descriptive status line that includes line ending and file type.
 set statusline=%F\ %m%=%{&ff}\ %y\ b%n\ @\ %v,%l/%L\ 
+
+" Remove trailing whitespace when writing out c files.
+autocmd FileType c,cpp autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " Load system headers and out of home links.
 set path=.,/usr/include,~/include,,
@@ -65,6 +65,7 @@ nmap <F4> 80<C-W><Bar>
 " Some meep-related abbreviations.
 iab nsmeep 0<C-D>namespace meep {<CR>}  // namespace meep<Up><End>
 iab nsosx 0<C-D>namespace osx {<CR>}  // namespace osx<Up><End>
+iab nsanon 0<C-D>namespace {<CR>}  // anonymous namespace<Up><End>
 " Note - paste command buffer: use ":p
 " Paste yank into command: <C-R>"
 
