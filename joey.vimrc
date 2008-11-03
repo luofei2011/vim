@@ -62,10 +62,6 @@ set sessionoptions=blank,buffers,curdir,folds,help,tabpages,resize,winsize
 " Set current window to 80-column width.
 nmap <F4> 80<C-W><Bar>
 
-" Some meep-related abbreviations.
-iab nsmeep 0<C-D>namespace meep {<CR>}  // namespace meep<Up><End>
-iab nsosx 0<C-D>namespace osx {<CR>}  // namespace osx<Up><End>
-iab nsanon 0<C-D>namespace {<CR>}  // anonymous namespace<Up><End>
 " Note - paste command buffer: use ":p
 " Paste yank into command: <C-R>"
 
