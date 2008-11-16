@@ -34,14 +34,22 @@ set softtabstop=2
 set nowrap
 set bs=2
 
-" Fix search highlighting making C comments too hard to read (grey on grey).
-highlight Search gui=reverse guifg=Orange guibg=NONE
+" When compiling, save files automatically.
+set autowrite
+
+" Completion help above command line... try it out for now.
+set wildmenu
+
+runtime joey_color_adjust.vimrc
 
 " A more descriptive status line that includes line ending and file type.
 set statusline=%F\ %m%=%{&ff}\ %y\ b%n\ @\ %v,%l/%L\ 
 
-" Remove trailing whitespace when writing out c files.
-autocmd FileType c,cpp autocmd BufWritePre <buffer> :%s/\s\+$//e
+" Remove trailing whitespace when writing out code files.
+autocmd FileType c,cpp,actionscript autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" Force cindent when editing actionscript.
+autocmd BufRead *.as set cindent
 
 " Load system headers and out of home links.
 set path=.,/usr/include,~/include,,
@@ -66,12 +74,17 @@ endf
 nmap <S-F1> :call FullScreen()<CR>
 nmap <S-F2> :call MyRc()<CR>
 
+" Set current window to 80-column width.
+nmap <C-8> 80<C-W><Bar>
+
 " Save out current session after saving all files.
 nmap <F2> :wa<Bar>exe "mksession! " . v:this_session<CR>
 set sessionoptions=blank,buffers,curdir,folds,help,tabpages,resize,winsize
 
-" Set current window to 80-column width.
-nmap <F4> 80<C-W><Bar>
+" Browse for files.
+nmap <F5> :NERDTree<CR>
+
+nmap <F8> :make<CR>
 
 " Note - paste command buffer: use ":p
 " Paste yank into command: <C-R>"

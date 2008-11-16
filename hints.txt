@@ -54,7 +54,7 @@ in insert mode:
   ctrl-w: delete word before cursor
   ctrl-u: delete all entered chars in line
   ctrl-N and P work as usual (word completion)
-  ctrl-R: insert register, eg. ':'
+  ctrl-R: insert register, eg. ':' (or command mode)
   ctrl-T/D: insert/remove one level of indent at beg of line
   ctrl-X: go into scroll mode
   ctrl-O: do one normal mode command (like shift-O)
