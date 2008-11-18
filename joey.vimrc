@@ -7,8 +7,8 @@ colorscheme cthulhian
 " Do os-specific stuff.
 " Proggy Tiny (slashes zero) from http://proggyfonts.com/
 if has('gui_win32')
-  "set guifont=ProggyTinyTTSZ:h12:cANSI
-  set guifont=ProggyTiny:h8:cANSI
+  set guifont=ProggyTinyTTSZ:h12:cANSI
+  "set guifont=ProggyTiny:h8:cANSI
 elseif has('gui_mac')
   set guifont=ProggyTinyTTSZ:h16
 endif
@@ -85,6 +85,7 @@ set sessionoptions=blank,buffers,curdir,folds,help,tabpages,resize,winsize
 " Browse for files.
 nmap <F5> :NERDTreeToggle<CR>
 
+" Easier compilation.
 nmap <F8> :make<CR>
 
 " Note - paste command buffer: use ":p
