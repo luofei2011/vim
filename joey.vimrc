@@ -44,7 +44,7 @@ set wildmenu
 runtime joey_color_adjust.vimrc
 
 " A more descriptive status line that includes line ending and file type.
-set statusline=%F\ %m%=%{&ff}\ %y\ b%n\ @\ %v,%l/%L\ 
+set statusline=%f\ %m%=%{&ff}\ %y\ b%n\ @\ %v,%l/%L\ 
 
 " Remove trailing whitespace when writing out code files.
 autocmd FileType c,cpp,actionscript autocmd BufWritePre <buffer> :%s/\s\+$//e
