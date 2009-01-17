@@ -47,7 +47,7 @@ runtime joey_color_adjust.vimrc
 set statusline=%f\ %m%=%{&ff}\ %y\ b%n\ @\ %v,%l/%L\ 
 
 " Remove trailing whitespace when writing out code files.
-autocmd FileType c,cpp,actionscript autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,cpp,actionscript,erlang autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " Force cindent when editing actionscript.
 autocmd BufRead *.as set cindent
@@ -83,7 +83,7 @@ nmap <F2> :wa<Bar>exe "mksession! " . v:this_session<CR>
 set sessionoptions=blank,buffers,curdir,folds,help,tabpages,resize,winsize
 
 " Browse for files.
-nmap <F5> :NERDTree<CR>
+nmap <F5> :NERDTreeToggle<CR>
 
 nmap <F8> :make<CR>
 
