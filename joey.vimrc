@@ -2,20 +2,15 @@
 " On Unix, source ~/.vim/joey.vimrc
 set nocompatible
 
-colorscheme cthulhian
-
-" Do os-specific stuff.
-" Proggy Tiny (slashes zero) from http://proggyfonts.com/
-if has('gui_win32')
-  set guifont=ProggyTinyTTSZ:h12:cANSI
-  "set guifont=ProggyTiny:h8:cANSI
-elseif has('gui_mac')
-  set guifont=ProggyTinyTTSZ:h16
-endif
-
 syntax on
 filetype plugin on
 filetype indent on
+
+" Always default to unix line ending.
+set ffs=unix,dos
+
+" Turn off infernal beeping.
+set vb t_vb=
 
 set hlsearch
 set incsearch
@@ -41,7 +36,18 @@ set autowrite
 " Completion help above command line... try it out for now.
 set wildmenu
 
-runtime joey_color_adjust.vimrc
+" Do os-specific stuff.
+" Proggy Tiny (slashes zero) from http://proggyfonts.com/
+if has("gui_running")
+  colorscheme cthulhian
+  if has('gui_win32')
+    set guifont=ProggyTinyTTSZ:h12:cANSI
+    "set guifont=ProggyTiny:h8:cANSI
+  elseif has('gui_mac')
+    set guifont=ProggyTinyTTSZ:h16
+  endif
+  runtime joey_color_adjust.vimrc
+endif
 
 " A more descriptive status line that includes line ending and file type.
 set statusline=%f\ %m%=%{&ff}\ %y\ b%n\ @\ %v,%l/%L\ 
