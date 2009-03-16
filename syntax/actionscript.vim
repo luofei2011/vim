@@ -1,11 +1,6 @@
-" Vim syntax file
-" Language:	actionScript
-" Maintainer:	Igor Dvorsky <amigo@modesite.net>
-" URL:		http://www.modesite.net/vim/actionscript.vim
-" Last Change:	2002 Sep 12
-" Updated to support AS 2.0 2004 Mar 12 by Richard Leider  (richard@appliedrhetoric.com)
-" Updated to support new AS 2.0 Flash 8 Language Elements 2005 September 29 (richard@appliedrhetoric.com)
-
+" Vim syntax file for ActionScript 3
+" Based on ActionScript2 plugin by Igor Dvorsky at:
+"   http://www.modesite.net/vim/actionscript.vim
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
@@ -33,9 +28,9 @@ syn match   actionScriptNumber				"-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
 
 " Actionscript 3 Statements, Keywords & Directives
 syn keyword actionScriptCase case
-syn match actionScriptCase "\<default\>"  " Needs to be defined before default xml namespace.
-syn match actionScriptDirective "\<default\>\s\+xml\s\+namespace\>"
-syn match actionScriptDirective "\<use\>\s\+namespace\>"
+syn match   actionScriptCase "\<default\>"  " Needs to be defined before default xml namespace.
+syn match   actionScriptDirective "\<default\>\s\+xml\s\+namespace\>"
+syn match   actionScriptDirective "\<use\>\s\+namespace\>"
 syn keyword actionScriptDirective import include
 syn keyword actionScriptAttribute dynamic final internal native override private protected public static
 syn keyword actionScriptDefinition class const extends function get implements interface namespace package set var
