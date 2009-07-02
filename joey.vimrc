@@ -87,5 +87,8 @@ au BufNewFile,BufRead *.as   setf actionscript
 au BufNewFile,BufRead *.atl  setf atlas
 
 " Correct typos.
-ia improt import
+ia clinet client
+ia comomn common
 ia flase false
+ia improt import
+ia namesapce namespace
