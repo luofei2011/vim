@@ -41,7 +41,7 @@ set wildmenu
 set statusline=%f\ %m%=%{&ff}\ %y\ b%n\ @\ %v,%l/%L\ 
 
 " Remove trailing whitespace when writing out code files.
-autocmd FileType c,cpp,actionscript,erlang autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,cpp,actionscript,erlang,python autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " Force cindent when editing actionscript.
 autocmd BufRead *.as set cindent
