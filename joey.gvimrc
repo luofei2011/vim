@@ -10,6 +10,8 @@ if has('gui_win32')
   "set guifont=ProggyTiny:h8:cANSI
 elseif has('gui_mac')
   set guifont=ProggyTinyTTSZ:h16
+elseif has('gui_gtk')
+  set guifont=Bitstream\ Vera\ Sans\ Mono\ 8
 endif
 runtime joey_color_adjust.vimrc
 " In gui mode, use Ctrl-S to save.
