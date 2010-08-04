@@ -40,13 +40,15 @@ set wildmenu
 " A more descriptive status line that includes line ending and file type.
 set statusline=%f\ %m%=%{&ff}\ %y\ b%n\ @\ %v,%l/%L\ 
 
+" Support actionscript file type.
+au BufNewFile,BufRead *.as   setf actionscript
+au BufNewFile,BufRead *.atl  setf atlas
+
 " Remove trailing whitespace when writing out code files.
-autocmd FileType c,cpp,actionscript,erlang,python autocmd BufWritePre <buffer> :%s/\s\+$//e
+au FileType c,cpp,actionscript,erlang,python autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " Force cindent when editing actionscript.
-autocmd BufRead *.as set cindent
-
-" Load system headers and out of home links.
+au FileType actionscript set cindent
 set path=.,/usr/include,~/include,,
 
 " Googley c indentation.
@@ -82,13 +84,10 @@ nmap <F8> :make<CR>
 " Note - paste command buffer: use ":p
 " Paste yank into command: <C-R>"
 
-" Support actionscript file type.
-au BufNewFile,BufRead *.as   setf actionscript
-au BufNewFile,BufRead *.atl  setf atlas
-
 " Correct typos.
 ia clinet client
 ia comomn common
+ia flahs flash
 ia flase false
 ia improt import
 ia namesapce namespace
