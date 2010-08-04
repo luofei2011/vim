@@ -40,10 +40,6 @@ set wildmenu
 " A more descriptive status line that includes line ending and file type.
 set statusline=%f\ %m%=%{&ff}\ %y\ b%n\ @\ %v,%l/%L\ 
 
-" Support actionscript file type.
-au BufNewFile,BufRead *.as   setf actionscript
-au BufNewFile,BufRead *.atl  setf atlas
-
 " Remove trailing whitespace when writing out code files.
 au FileType c,cpp,actionscript,erlang,python autocmd BufWritePre <buffer> :%s/\s\+$//e
 
