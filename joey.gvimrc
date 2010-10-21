@@ -10,6 +10,9 @@ if has('gui_win32')
   "set guifont=ProggyTiny:h8:cANSI
 elseif has('gui_mac')
   set guifont=ProggyTinyTTSZ:h16
+elseif has('gui_macvim')
+  set guifont=ProggyTiny:h11
+  set transparency=20
 elseif has('gui_gtk')
   set guifont=Bitstream\ Vera\ Sans\ Mono\ 8
 endif
