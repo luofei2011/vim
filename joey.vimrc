@@ -16,13 +16,13 @@ set vb t_vb=
 set hlsearch
 set incsearch
 set ignorecase
+set smartcase  " if search contains uppercase, then don't ignorecase
 
 set ruler
 set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 set laststatus=2
 
-set showmatch
 set autoindent
 set smartindent
 set expandtab
@@ -30,6 +30,10 @@ set shiftwidth=2
 set softtabstop=2
 set nowrap
 set bs=2
+set showmatch  " show matching parens
+
+" Hide buffers instead of closing them. Keeps undo around; don't force save.
+set hidden
 
 " When compiling, save files automatically.
 set autowrite
