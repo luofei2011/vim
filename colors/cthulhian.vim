@@ -33,7 +33,9 @@ highlight LineNr	gui=NONE guifg=#007777 guibg=NONE
 highlight SpecialKey	guibg=bg guifg=SeaGreen
 highlight StatusLine	gui=BOLD guifg=#c9c9c9 guibg=#4e4e6e
 highlight StatusLineNC	gui=NONE guifg=#b9b9b9 guibg=#3e3e5e
-highlight Comment	gui=None guifg=#708090
+" highlight Comment	gui=None guifg=#708090
+highlight Comment	gui=None guifg=#80a0c0
+" highlight Comment	gui=None guifg=cyan
 highlight Conditional	gui=Bold guifg=LightGreen guibg=bg
 highlight Repeat	gui=Bold guifg=SeaGreen2 guibg=bg
 highlight Special	gui=None guifg=#dd88ff
