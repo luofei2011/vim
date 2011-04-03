@@ -9,6 +9,9 @@ filetype indent on
 " Always default to unix line ending.
 set ffs=unix,dos
 
+" Don't store swap files in same directory.
+set directory-=.
+
 " Turn off infernal beeping.
 " This is reset when gui starts, so set again in gvimrc.
 set vb t_vb=
