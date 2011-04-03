@@ -4,7 +4,8 @@
 set vb t_vb=
 
 " Proggy Tiny (slashes zero) from http://proggyfonts.com/
-colorscheme cthulhian
+set background=dark
+colorscheme solarized
 if has('gui_win32')
   set guifont=ProggyTinyTTSZ:h12:cANSI
   "set guifont=ProggyTiny:h8:cANSI
@@ -12,7 +13,7 @@ elseif has('gui_mac')
   set guifont=ProggyTinyTTSZ:h16
 elseif has('gui_macvim')
   set guifont=ProggyTiny:h11
-  set transparency=20
+  set transparency=5
 elseif has('gui_gtk')
   set guifont=Bitstream\ Vera\ Sans\ Mono\ 8
 endif
