@@ -80,6 +80,7 @@ set sessionoptions=blank,buffers,curdir,folds,help,tabpages,resize,winsize
 
 " Browse for files.
 nmap <F5> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc$']
 
 " Easier compilation.
 nmap <F8> :make<CR>
